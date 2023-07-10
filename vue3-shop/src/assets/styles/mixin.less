@@ -1,0 +1,31 @@
+.flex(@main: flex-start, @cross: center) {
+  display: flex;
+  justify-content: @main;
+  align-items: @cross;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.square(@width) {
+  width: @width;
+  height: @width;
+}
+
+.square-img(@width) {
+  .square(@width);
+  img {
+    display: block;
+    .square(100%);
+  }
+}
+
+.line-clamp(@line: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @line;
+  overflow: hidden;
+}
